@@ -9,51 +9,133 @@
     </head>
     <body>
         <header>
-            <img id="main-logo" src="assets/Booki.png">
-            <nav>
+            <img id="main-logo" src="assets/logo/Booki.png">
+            <nav id="main-navbar">
                 <ul>
-                    <li class="main-navbar-elm">Hébergements</li>
-                    <li class="main-navbar-elm">Activités</li>
+                    <li class="mainNavbarElm">Hébergements</li>
+                    <li class="mainNavbarElm">Activités</li>
                 </ul>
             </nav>
         </header>
+        <div id="branding">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <div id="tagline">En plein centre-ville ou en pleine nature</div>
+        </div>
+        <div id="search">
+            <div id="search-input">
+                <form action="nothing.php" id="search-input-form" target="_self">
+                    <label for="search-input-location">Icon</label>
+                    <input type="text" id="search-input-location" placeholder="Marseille, France">
+                    <input type="submit" placeholder="Rechercher">
+                </form>
+            </div>
+            <div id="search-filters">
+                <h2 id="search-filters-title">Filtres</h2>
+                <div class="searchFiltersButtons">
+                    <div class="searchFiltersIcons">Icon</div>
+                    <div class="searchFiltersText">Économique</div>
+                </div>
+                <div class="searchFiltersButtons">
+                    <div class="searchFiltersIcons">Icon</div>
+                    <div class="searchFiltersText">Familial</div>
+                </div>
+                <div class="searchFiltersButtons">
+                    <div class="searchFiltersIcons">Icon</div>
+                    <div class="searchFiltersText">Romantique</div>
+                </div>
+                <div class="searchFiltersButtons">
+                    <div class="searchFiltersIcons">Icon</div>
+                    <div class="searchFiltersText">Animaux autorisés</div>
+                </div>
+            </div>
+            <div id="search-results-numbers">
+                <div id="search-results-numbers-icon">Icon</div>
+                <div id="search-results-numbers-text">Plus de 500 logements sont disponibles dans cette ville</div>
+            </div>
+        </div>
         <main>
-            <section>
-                <div id="fake_section"><p>Blah</p></div>
-            </section>
-            <article>
-                <div id="fake_article"><p>Blah</p></div>
+            <article id="hosting">
+                <section id="hosting-in">
+                    <h2 id="section-hosting-title">Hébergements à Marseille</h2>
+                    <div id="section-hosting-content">
+                        <div class="hostingCards">
+                            <div id="hosting-card-img-1"></div>
+                            <div id="hosting-card-txt-1">
+                                <h3>Auberge La Canebière</h3>
+                                <p>Nuit à partir de 25€</p>
+                                <div class="ratingIcons">Icon</div>
+                            </div>
+                        </div>
+                        <div class="hostingCards">
+                            <div id="hosting-card-img-2"></div>
+                            <div id="hosting-card-txt-2">
+                                <h3>Hôtel du port</h3>
+                                <p>Nuit à partir de 52€</p>
+                                <div class="ratingIcons">Icon</div>
+                            </div>
+                        </div>
+                        <div class="hostingCards">
+                            <div id="hosting-card-img-3"></div>
+                            <div id="hosting-card-txt-3">
+                                <h3>Hôtel les mouettes</h3>
+                                <p>Nuit à partir de 76€</p>
+                                <div class="ratingIcons">Icon</div>
+                            </div>
+                        </div>
+                        <div class="hostingCards">
+                            <div id="hosting-card-img-4"></div>
+                            <div id="hosting-card-txt-4">
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de 46€</p>
+                                <div class="ratingIcons">Icon</div>
+                            </div>
+                        </div>
+                        <div class="hostingCards">
+                            <div id="hosting-card-img-5"></div>
+                            <div id="hosting-card-txt-5">
+                                <h3>Auberge Le Panier</h3>
+                                <p>Nuit à partir de 23€</p>
+                                <div class="ratingIcons">Icon</div>
+                            </div>
+                        </div>
+                        <div class="hostingCards">
+                            <div id="hosting-card-img-6"></div>
+                            <div id="hosting-card-txt-6">
+                                <h3>Hôtel Chez Amina</h3>
+                                <p>Nuit à partir de 96€</p>
+                                <div class="ratingIcons">Icon</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="most-popular">
+                </section>
+            </article>
+            <article id="activity">
             </article>
         </main>
         <footer>
-            <div class="footerElement">
-                <div id="footer-about-elm">
-                    <h2>À propos</h2>
-                    <ul>
-                        <li>Fonctionnement du site</li>
-                        <li>Conditions générales</li>
-                        <li>Données et confidentialité</li>
-                    </ul>
-                </div>
+            <div class="footerElm">
+                <h2>À propos</h2>
+                <ul>
+                    <li>Fonctionnement du site</li>
+                    <li>Conditions générales</li>
+                    <li>Données et confidentialité</li>
+                </ul>
             </div>
-            <div class="footerElement">
-                <div id="footer-hosting-elm">
-                    <h2>Nos Hébergements</h2>
-                    <ul>
-                        <li>Charte qualité</li>
-                        <li>Proposer votre hôtel</li>
-                    </ul>
-                </div>
+            <div class="footerElm">
+                <h2>Nos Hébergements</h2>
+                <ul>
+                    <li>Charte qualité</li>
+                    <li>Proposer votre hôtel</li>
+                </ul>
             </div>
-            <div class="footerElement">
-                <div id="footer-support-elm">
-                    <h2>Assistance</h2>
-                    <ul>
-                        <li>Centre d'aide</li>
-                        <li>Nous contacter</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="footerElm">
+                <h2>Assistance</h2>
+                <ul>
+                    <li>Centre d'aide</li>
+                    <li>Nous contacter</li>
+                </ul>
             </div>
         </footer>
     </body>

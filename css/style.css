@@ -7,7 +7,7 @@
 }
 body {
     max-width: 1400px;
-    color: var(--blue);
+    color: var(--black);
     font-family: Raleway, sans-serif;
 }
 header {
@@ -32,6 +32,115 @@ nav ul {
     margin: 0px;
     padding: 0px;
 }
+/* branding section */
+#tagline {
+    margin-top: -1em;
+}
+/* search section */
+#search {
+    width: 60%;
+    font-weight: bold;
+}
+#search-input {
+    margin-top: 1em;
+}
+#search-filters {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#search-filters-title {
+    font-size: 1em;
+}
+.searchFiltersButtons {
+    display: flex;
+    flex-flow: row nowrap;
+}
+#search-results-numbers {
+    display: flex;
+    flex-flow: row nowrap;
+}
+/* hosting-in section */
+#hosting-in {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--grey);
+    margin: 2em;
+}
+#section-hosting-content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+    margin: 1em;
+}
+.hostingCards {
+    height: 23em;
+    width: calc(33% - 2em);
+    background-color: var(--white);
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 20px 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+#hosting-card-img-1 {
+    height: 15em;
+    background-image: url("/assets/images/hosting-in/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 0px 0px;
+}
+#hosting-card-txt-1 {
+    background-color: var(--white);
+}
+#hosting-card-img-2 {
+    height: 15em;
+    background-image: url("/assets/images/hosting-in/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 0px 0px;
+}
+#hosting-card-txt-2 {
+    background-color: var(--white);
+}
+#hosting-card-img-3 {
+    height: 15em;
+    background-image: url("/assets/images/hosting-in/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 0px 0px;
+}
+#hosting-card-txt-3 {
+    background-color: var(--white);
+}
+#hosting-card-img-4 {
+    height: 15em;
+    background-image: url("/assets/images/hosting-in/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 0px 0px;
+}
+#hosting-card-txt-4 {
+    background-color: var(--white);
+}
+#hosting-card-img-5 {
+    height: 15em;
+    background-image: url("/assets/images/hosting-in/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 0px 0px;
+}
+#hosting-card-txt-5 {
+    background-color: var(--white);
+}
+#hosting-card-img-6 {
+    height: 15em;
+    background-image: url("/assets/images/hosting-in/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+    border: 5px solid var(--white);
+    border-radius: 20px 20px 0px 0px;
+}
+#hosting-card-txt-6 {
+    background-color: var(--white);
+}
+/* most-popular section */
+#most-popular {
+    background-color: var(--grey);
+}
+/* footer */
 footer {
     display: flex;
     flex-flow: row nowrap;
