@@ -14,7 +14,7 @@ else
   set shortmess=aoO
 endif
 badd +1 index.html
-badd +1 css/style.css
+badd +110 css/style.css
 argglobal
 %argdel
 $argadd index.html
@@ -36,9 +36,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 99 + 74) / 149)
-exe 'vert 2resize ' . ((&columns * 49 + 74) / 149)
+exe 'vert 1resize ' . ((&columns * 85 + 70) / 140)
+exe 'vert 2resize ' . ((&columns * 54 + 70) / 140)
 argglobal
+balt css/style.css
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -48,24 +49,27 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-4,10fold
-14,20fold
-23,24fold
-27,63fold
-67,127fold
-128,157fold
-160,175fold
-179,200fold
+3,13fold
+16,28fold
+30,35fold
+37,95fold
+100,198fold
+200,252fold
+255,275fold
+278,315fold
 let &fdl = &fdl
-let s:l = 65 - ((64 * winheight(0) + 16) / 33)
+let s:l = 1 - ((0 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 65
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
-2argu
+if bufexists(fnamemodify("css/style.css", ":p")) | buffer css/style.css | else | edit css/style.css | endif
+if &buftype ==# 'terminal'
+  silent file css/style.css
+endif
 balt index.html
 setlocal fdm=manual
 setlocal fde=0
@@ -76,24 +80,28 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-1,6fold
-30,62fold
-64,76fold
-78,117fold
-127,171fold
-173,202fold
-204,227fold
-229,244fold
+1,7fold
+9,29fold
+31,64fold
+66,78fold
+80,181fold
+191,246fold
+248,289fold
+291,324fold
+326,349fold
+351,397fold
+399,425fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 16) / 33)
+let s:l = 1 - ((0 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 99 + 74) / 149)
-exe 'vert 2resize ' . ((&columns * 49 + 74) / 149)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 85 + 70) / 140)
+exe 'vert 2resize ' . ((&columns * 54 + 70) / 140)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
