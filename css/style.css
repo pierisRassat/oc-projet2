@@ -227,8 +227,12 @@ ul.search-filters-buttons li:hover {
     width: 100%;
     max-width: auto;
     object-fit: cover;
+    object-position: 50% 45%;
     border: 1px none var(--background);
     border-radius: 20px 20px 0 0;
+}
+.hosting-in-card img.positioned {
+    object-position: 0% 100%;
 }
 .hosting-in-card-txt {
     display: flex;
