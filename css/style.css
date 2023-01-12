@@ -5,7 +5,6 @@
     --background: #FFF;
     --background-alt: #F2F2F2;
 }
-/* general section */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +32,6 @@ a:visited {
     list-style-type: none;
     text-decoration: none;
 }
-/* header section */
 header {
     display: flex;
     flex-flow: row nowrap;
@@ -56,8 +54,8 @@ nav#main-navbar ul {
 }
 nav#main-navbar ul li {
     display: flex;
-    height: 67px; /* fix me */
-    width: 190px; /* check me */
+    height: 67px;
+    width: 190px;
     align-items: flex-end;
     justify-content: center;
 }
@@ -65,20 +63,18 @@ nav#main-navbar ul li:hover {
     border-top: 2px solid var(--primary);
     color: var(--primary);
 }
-/* branding section */
 #branding {
     margin: 63px 55px 0 55px;
 }
 #branding h1 {
-    font-size: 1.4rem;
+    font-size: 22px;
     font-weight: 700;
 }
 #tagline {
-    font-size: .9em;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
 }
-/* search section */
 #search {
     margin: 0 55px 0 55px;
 }
@@ -182,7 +178,6 @@ ul.search-filters-buttons li:hover {
 #search-results-numbers-text {
     padding-left: 11px;
 }
-/* hostin section */
 #hosting {
     display: flex;
     flex-flow: row nowrap;
@@ -190,9 +185,8 @@ ul.search-filters-buttons li:hover {
     max-width: calc(100vw - 50px);
     margin: 39px 50px 0 50px;
 }
-/* hosting-in section */
 #hosting-in {
-    max-width: 60vw; /* looks fine */
+    max-width: 60vw;
     display: flex;
     flex-flow: column nowrap;
     background-color: var(--background-alt);
@@ -264,7 +258,6 @@ ul.search-filters-buttons li:hover {
     font-size: 18px;
     font-weight: 700;
 }
-/* most-popular section */
 #most-popular {
     max-width: 32vw;
     display: flex;
@@ -328,7 +321,6 @@ ul.search-filters-buttons li:hover {
     font-weight: 400;
     font-size: 14px;
 }
-/* activity-section */
 #activity {
     display: flex;
     flex-flow: column nowrap;
@@ -364,7 +356,6 @@ ul.search-filters-buttons li:hover {
     font-size: 15px;
     padding: 19px;
 }
-/* footer-section */
 footer {
     display: flex;
     flex-flow: row nowrap;
@@ -387,7 +378,6 @@ footer ul {
     font-size: 18px;
     margin-bottom: 5px;
 }
-/* tablet-section */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     html {
         max-width: 992px;
@@ -405,7 +395,7 @@ footer ul {
         flex-flow: column nowrap;
     }
     #hosting-in {
-        max-width: 100vw; /* looks fine */
+        max-width: 100vw;
         display: flex;
         width: 100%;
     }
@@ -448,7 +438,6 @@ footer ul {
         padding-bottom: 12px;
     }
 }
-/* mobile-section */
 @media only screen and (max-width: 768px) {
     html {
         max-width: 768px;
