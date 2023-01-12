@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/devops/oc-devweb/projects/project2/oc-projet2
+cd ~/dev/oc-devweb/projects/project2/oc-projet2
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -14,11 +14,91 @@ else
   set shortmess=aoO
 endif
 badd +1 index.html
-badd +110 css/style.css
+badd +1 css/style.css
+badd +12 README.md
 argglobal
 %argdel
 $argadd index.html
 $argadd css/style.css
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+edit css/style.css
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 106 + 81) / 162)
+exe 'vert 2resize ' . ((&columns * 55 + 81) / 162)
+argglobal
+if bufexists(fnamemodify("css/style.css", ":p")) | buffer css/style.css | else | edit css/style.css | endif
+if &buftype ==# 'terminal'
+  silent file css/style.css
+endif
+balt index.html
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 16) / 33)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+argglobal
+2argu
+balt index.html
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+1,7fold
+9,26fold
+28,59fold
+61,73fold
+75,178fold
+180,255fold
+257,316fold
+318,348fold
+350,373fold
+375,463fold
+let &fdl = &fdl
+1
+normal! zc
+let s:l = 399 - ((16 * winheight(0) + 16) / 33)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 399
+normal! 05|
+wincmd w
+exe 'vert 1resize ' . ((&columns * 106 + 81) / 162)
+exe 'vert 2resize ' . ((&columns * 55 + 81) / 162)
+tabnext
 edit index.html
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
@@ -36,29 +116,22 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 85 + 70) / 140)
-exe 'vert 2resize ' . ((&columns * 54 + 70) / 140)
+exe 'vert 1resize ' . ((&columns * 100 + 81) / 162)
+exe 'vert 2resize ' . ((&columns * 61 + 81) / 162)
 argglobal
+1argu
 balt css/style.css
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
+setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-3,13fold
-16,28fold
-30,35fold
-37,95fold
-100,198fold
-200,252fold
-255,275fold
-278,315fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 15) / 31)
+let s:l = 1 - ((0 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -66,6 +139,7 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
+1argu
 if bufexists(fnamemodify("css/style.css", ":p")) | buffer css/style.css | else | edit css/style.css | endif
 if &buftype ==# 'terminal'
   silent file css/style.css
@@ -75,34 +149,22 @@ setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
+setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-1,7fold
-9,29fold
-31,64fold
-66,78fold
-80,181fold
-191,246fold
-248,289fold
-291,324fold
-326,349fold
-351,397fold
-399,425fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 15) / 31)
+let s:l = 466 - ((32 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 466
 normal! 0
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 85 + 70) / 140)
-exe 'vert 2resize ' . ((&columns * 54 + 70) / 140)
-tabnext 1
+exe 'vert 1resize ' . ((&columns * 100 + 81) / 162)
+exe 'vert 2resize ' . ((&columns * 61 + 81) / 162)
+tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
