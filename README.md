@@ -9,11 +9,12 @@ HTML/CSS model for booki website
 * Add anchors
 * Images sizes in HTML
 * space up footer
-
-###Todo:
 * Sizing all boxes
 * Spacing all boxes
 * Responsive designe
+
+###Todo:
+* make search bar don't breaking with viewport > 395px
 * Check for unused CSS
 * Review and clean code
 
@@ -33,5 +34,5 @@ Margin and padding are sized in pixels for having the same size on differents de
 
 Fonts are sized in pixels rather than in em/rem for being the closest possible to the PNG model.
 
-Width are sized in % for being responsive at any viewport width.
+Width are sized in % for being coherently responsive at any viewport width.
 

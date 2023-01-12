@@ -313,6 +313,8 @@ ul.search-filters-buttons li:hover {
     padding-top: 16px;
     padding-left: 15px;
     padding-right: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .most-popular-card h3 {
     font-weight: 700;
@@ -524,7 +526,6 @@ footer ul {
         width: 100%;
         background-color: var(--background);
         border: solid 1px var(--background);
-
     }
     #section-hosting-in-container {
         display: flex;
@@ -564,11 +565,16 @@ footer ul {
     }
     .activity-card img {
         max-width: calc(100vw - 20px);
-        height: 246px;
+        height: 124px;
+        object-position: 50% 5%;
+    }
+    .activity-card img.positioned {
+        object-position: 50% 45%;
     }
     footer {
         display: flex;
         flex-flow: column nowrap;
+        margin: 61px 20px 0 20px;
     }
     .footer-elm {
         padding: 0 0 0 30px;
