@@ -14,8 +14,10 @@ else
   set shortmess=aoO
 endif
 badd +1 index.html
-badd +1 css/style.css
-badd +12 README.md
+badd +309 css/style.css
+badd +6 README.md
+badd +133 css/mobile.css
+badd +40 css/tablet.css
 argglobal
 %argdel
 $argadd index.html
@@ -39,8 +41,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 106 + 81) / 162)
-exe 'vert 2resize ' . ((&columns * 55 + 81) / 162)
+exe '1resize ' . ((&lines * 33 + 19) / 38)
+exe 'vert 1resize ' . ((&columns * 107 + 83) / 166)
+exe '2resize ' . ((&lines * 33 + 19) / 38)
+exe 'vert 2resize ' . ((&columns * 56 + 83) / 166)
 argglobal
 if bufexists(fnamemodify("css/style.css", ":p")) | buffer css/style.css | else | edit css/style.css | endif
 if &buftype ==# 'terminal'
@@ -80,24 +84,26 @@ silent! normal! zE
 9,26fold
 28,59fold
 61,73fold
-75,178fold
-180,255fold
-257,316fold
-318,348fold
-350,373fold
-375,463fold
+75,179fold
+181,256fold
+258,319fold
+321,351fold
+353,376fold
+378,392fold
 let &fdl = &fdl
 1
 normal! zc
-let s:l = 399 - ((16 * winheight(0) + 16) / 33)
+let s:l = 392 - ((6 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 399
-normal! 05|
+keepjumps 392
+normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 106 + 81) / 162)
-exe 'vert 2resize ' . ((&columns * 55 + 81) / 162)
+exe '1resize ' . ((&lines * 33 + 19) / 38)
+exe 'vert 1resize ' . ((&columns * 107 + 83) / 166)
+exe '2resize ' . ((&lines * 33 + 19) / 38)
+exe 'vert 2resize ' . ((&columns * 56 + 83) / 166)
 tabnext
 edit index.html
 let s:save_splitbelow = &splitbelow
@@ -116,8 +122,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 100 + 81) / 162)
-exe 'vert 2resize ' . ((&columns * 61 + 81) / 162)
+exe 'vert 1resize ' . ((&columns * 101 + 83) / 166)
+exe 'vert 2resize ' . ((&columns * 64 + 83) / 166)
 argglobal
 1argu
 balt css/style.css
@@ -130,13 +136,37 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+4,14fold
+18,29fold
+32,35fold
+38,96fold
+101,234fold
+237,305fold
+309,345fold
+349,384fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 16) / 33)
+4
+normal! zc
+18
+normal! zc
+32
+normal! zc
+38
+normal! zc
+101
+normal! zc
+237
+normal! zc
+309
+normal! zc
+349
+normal! zc
+let s:l = 246 - ((230 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 246
+normal! 01|
 wincmd w
 argglobal
 1argu
@@ -155,15 +185,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 466 - ((32 * winheight(0) + 16) / 33)
+let s:l = 1 - ((0 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 466
+keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 100 + 81) / 162)
-exe 'vert 2resize ' . ((&columns * 61 + 81) / 162)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 101 + 83) / 166)
+exe 'vert 2resize ' . ((&columns * 64 + 83) / 166)
 tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

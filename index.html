@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 992px)" />
+    <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 768px)" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
 <body>
     <header>
         <img id="main-logo" src="assets/logo/Booki.png" 
-        width="61" height="19" alt="Booki logo" >
+            width="61" height="19" alt="Booki main logo" >
         <nav id="main-navbar">
             <ul>
                 <li class="main-navbar-elm">
@@ -26,30 +28,34 @@
             </ul>
         </nav>
     </header>
-    <div id="branding">
+    <article id="branding">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <section id="tagline">
             En plein centre-ville ou en pleine nature
         </section>
-    </div>
-    <div id="search">
-        <div id="search-input">
+    </article>
+    <article id="search">
+        <section id="search-input">
             <div id="location-icon">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>
             </div>
             <form id="search-input-form" action="nothing.php" target="_self">
-                <label for="search-input-location">
+                <label for="search-input-field">
                     <input type="text" id="search-input-field" value="Marseille, France">
-                    <i class="hidden fa-solid fa-magnifying-glass"></i>
+                </label>
+                <label for="search-input-submit">
                     <input type="submit" id="search-input-submit" value="Rechercher">
                 </label>
+                <label id="search-input-mobile-submit-icon">
+                        <i class="hidden fa-solid fa-magnifying-glass"></i>
+                </label>
             </form>
-        </div>
-        <div id="search-filters">
+        </section>
+        <section id="search-filters">
             <h2 id="search-filters-title">Filtres</h2>
             <ul class="search-filters-buttons">
                 <li>
-                    <div class="search-filters-icon">
+                    <div class="search-filters-buttons-icon">
                         <i class="fa-solid fa-money-bill-wave"></i>
                     </div>
                     <div class="search-filters-buttons-desc">
@@ -57,7 +63,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="search-filters-icon">
+                    <div class="search-filters-buttons-icon">
                         <i class="fa-solid fa-person"></i>
                     </div>
                     <div class="search-filters-buttons-desc">
@@ -65,7 +71,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="search-filters-icon">
+                    <div class="search-filters-buttons-icon">
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <div class="search-filters-buttons-desc">
@@ -73,7 +79,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="search-filters-icon">
+                    <div class="search-filters-buttons-icon">
                         <i class="fa-solid fa-dog"></i>
                     </div>
                     <div class="search-filters-buttons-desc">
@@ -81,27 +87,26 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        <div id="search-results-numbers">
-            <div id="search-results-numbers-icon">
-                <i class="fa-solid fa-info"></i>
-            </div>
-            <div id="search-results-numbers-text">
+        </section>
+        <section id="search-results-occurrences">
+            <i class="fa-solid fa-info"></i>
+            <p>
                 Plus de 500 logements sont disponibles dans cette ville
-            </div>
-        </div>
-    </div>
+            </p>
+        </section>
+    </article>
     <main>
-        <section id="hosting">
+        <div id="hosting">
             <article id="hosting-in">
-                <section class="section-title">
-                    <h2 id="hosting-in-title">Hébergements à Marseille</h2>
-                </section>
+                    <h2 class="section-title">Hébergements à Marseille</h2>
                 <section id="section-hosting-in-container">
                     <article class="hosting-in-card">
-                        <img src="assets/images/hosting-in/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
-                        height="124" width="246" alt="Auberge La Canebière"
-                        class="positioned">
+                        <picture>
+                            <img src="assets/images/hosting-in/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
+                            alt="Auberge La Canebière"
+                            width="246" height="124"
+                            class="positioned" >
+                        </picture>
                         <div class="hosting-in-card-container">
                             <section class="hosting-in-card-txt">
                                 <h3>Auberge La Canebière</h3>
@@ -118,9 +123,12 @@
                         </div>
                     </article>
                     <article class="hosting-in-card">
-                        <img src="assets/images/hosting-in/fred-kleber-gTbaxaVLvsg-unsplash.jpg" 
-                        height="124" width="246" alt="Hôtel du port"
-                        class="positioned">
+                        <picture>
+                            <img src="assets/images/hosting-in/fred-kleber-gTbaxaVLvsg-unsplash.jpg" 
+                            width="246" height="124"
+                            alt="Hôtel du port"
+                            class="positioned" >
+                        </picture>
                         <div class="hosting-in-card-container">
                             <section class="hosting-in-card-txt">
                                 <h3>Hôtel du port</h3>
@@ -137,8 +145,11 @@
                         </div>
                     </article>
                     <article class="hosting-in-card">
-                        <img src="assets/images/hosting-in/reisetopia-B8WIgxA_PFU-unsplash.jpg" 
-                        height="124" width="246" alt="Hôtel des mouettes">
+                        <picture>
+                            <img src="assets/images/hosting-in/reisetopia-B8WIgxA_PFU-unsplash.jpg" 
+                            width="246" height="124"
+                            alt="Hôtel des mouettes">
+                        </picture>
                         <div class="hosting-in-card-container">
                             <section class="hosting-in-card-txt">
                                 <h3>Hôtel les mouettes</h3>
@@ -155,8 +166,11 @@
                         </div>
                     </article>
                     <article class="hosting-in-card">
-                        <img src="assets/images/hosting-in/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-                        height="124" width="246" alt="Hôtel de la mer">
+                        <picture>
+                            <img src="assets/images/hosting-in/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                            width="246" height="124"
+                            alt="Hôtel de la mer">
+                        </picture>
                         <div class="hosting-in-card-container">
                             <section class="hosting-in-card-txt">
                                 <h3>Hôtel de la mer</h3>
@@ -173,8 +187,11 @@
                         </div>
                     </article>
                     <article class="hosting-in-card">
-                        <img src="assets/images/hosting-in/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
-                        height="124" width="246" alt="Auberge Le Panier">
+                        <picture>
+                            <img src="assets/images/hosting-in/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                            width="246" height="124"
+                            alt="Auberge Le Panier">
+                        </picture>
                         <div class="hosting-in-card-container">
                             <section class="hosting-in-card-txt">
                                 <h3>Auberge Le Panier</h3>
@@ -191,8 +208,11 @@
                         </div>
                     </article>
                     <article class="hosting-in-card">
-                        <img src="assets/images/hosting-in/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
-                        height="124" width="246" alt="Hôtel Chez Amina">
+                        <picture>
+                            <img src="assets/images/hosting-in/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                            width="246" height="124"
+                            alt="Hôtel Chez Amina">
+                        </picture>
                         <div class="hosting-in-card-container">
                             <section class="hosting-in-card-txt">
                                 <h3>Hôtel Chez Amina</h3>
@@ -214,17 +234,18 @@
                 </section>
             </article>
             <article id="most-popular">
-                <section class="section-title">
-                    <h2 id="most-popular-title-text">Les plus populaires</h2>
-                    <div id="most-popular-title-icon">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                </section>
+                <div id="most-popular-title-container">
+                    <h2 class="section-title">Les plus populaires</h2>
+                    <i class="fa-solid most-popular-title-icon fa-chart-line"></i>
+                </div> 
                 <section id="section-most-popular-container">
                     <article class="most-popular-card">
-                        <img src="assets/images/most-pop/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" 
-                            alt="Hôtel le soleil du matin" width="137" height="144" >
-                        <div class="most-pop-card-container">
+                        <picture>
+                            <img src="assets/images/most-pop/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" 
+                            alt="Hôtel le soleil du matin"
+                            width="137" height="144" >
+                        </picture>
+                        <div class="most-popular-card-container">
                             <section class="most-popular-card-txt">
                                 <h3>Hôtel Le soleil du matin</h3>
                                 <p>
@@ -240,9 +261,12 @@
                         </div>
                     </article>
                     <article class="most-popular-card">
-                        <img src="assets/images/most-pop/aw-creative-VGs8z60yT2c-unsplash.jpg" 
-                          alt="Chambres d'hôtes Au cœur de l'eau" width="137" height="144">
-                        <div class="most-pop-card-container">
+                        <picture>
+                            <img src="assets/images/most-pop/aw-creative-VGs8z60yT2c-unsplash.jpg" 
+                              alt="Chambres d'hôtes Au cœur de l'eau"
+                              width="137" height="144">
+                        </picture>
+                        <div class="most-popular-card-container">
                             <section class="most-popular-card-txt">
                                 <h3>Chambres d'hôtes Au cœur de l'eau</h3>
                                 <p>
@@ -258,9 +282,12 @@
                         </div>
                     </article>
                     <article class="most-popular-card">
-                        <img src="assets/images/most-pop/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
-                            alt="Hôtel Bleu et Blanc" width="137" height="144">
-                        <div class="most-pop-card-container">
+                        <picture title="Hôtel Bleu et Blanc">
+                            <img src="assets/images/most-pop/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                                alt="Hôtel Bleu et Blanc"
+                                width="137" height="144">
+                        </picture>
+                        <div class="most-popular-card-container">
                             <section class="most-popular-card-txt">
                                 <h3>Hôtel Bleu et Blanc</h3>
                                 <p>
@@ -277,37 +304,49 @@
                     </article>
                 </section>
             </article>
-        </section>
+        </div>
         <article id="activity">
             <h2 id="section-activity-title">Activités à Marseille</h2>
             <div id="section-activity-container">
-                <div class="activity-card">
+                <figure class="activity-card">
                     <img src="/assets/images/activity/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
-                        alt="Le vieux port de Marseille" height="398" width="302">
-                    <h3>Vieux-port</h3>
-                </div>
-                <div class="activity-card">
+                    alt="Le vieux port de Marseille"
+                    height="398" width="302" >
+                    <figcaption>
+                        <h3>Vieux-port</h3>
+                    </figcaption>
+                </figure>
+                <figure class="activity-card">
                     <img src="/assets/images/activity/paul-hermann-QFTrLdQIRhI-unsplash.jpg" 
-                        alt="Le Fort de Pomègues" height="398" width="302"
-                        class="positioned">
-                    <h3>Fort de Pomègues</h3>
-                </div>
-                <div class="activity-card">
+                    alt="Le Fort de Pomègues"
+                    height="398" width="302"
+                    class="positioned" >
+                    <figcaption>
+                        <h3>Fort de Pomègues</h3>
+                    </figcaption>
+                </figure>
+                <figure class="activity-card">
                     <img src="/assets/images/activity/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" 
-                        alt="Le Parc national des Calanques" height="398" width="302"
-                        class="positioned">
-                    <h3>Parc national des Calanques</h3>
-                </div>
-                <div class="activity-card">
+                    alt="Le Parc national des Calanques"
+                    height="398" width="302"
+                    class="positioned" >
+                    <figcaption>
+                        <h3>Parc national des Calanques</h3>
+                    </figcaption>
+                </figure>
+                <figure class="activity-card">
                     <img src="/assets/images/activity/florian-wehde-xW9e8gdotxI-unsplash.jpg" 
-                        alt="Notre Dame de la Garde" height="398" width="302">
-                    <h3>Notre-Dame-de-la-Garde</h3>
-                </div>
+                    alt="Notre Dame de la Garde"
+                    height="398" width="302" >
+                    <figcaption>
+                        <h3>Notre-Dame-de-la-Garde</h3>
+                    </figcaption>
+                </figure>
             </div>
         </article>
     </main>
     <footer>
-        <div class="footer-elm">
+        <article class="footer-nav-elm">
             <h2>À propos</h2>
             <ul>
                 <li>
@@ -320,8 +359,8 @@
                     Données et confidentialité
                 </li>
             </ul>
-        </div>
-        <div class="footer-elm">
+        </article> 
+        <article class="footer-nav-elm">
             <h2>Nos Hébergements</h2>
             <ul>
                 <li>
@@ -331,8 +370,8 @@
                     Proposer votre hôtel
                 </li>
             </ul>
-        </div>
-        <div class="footer-elm">
+        </article> 
+        <article class="footer-nav-elm">
             <h2>Assistance</h2>
             <ul>
                 <li>
@@ -342,7 +381,7 @@
                     Nous contacter
                 </li>
             </ul>
-        </div>
+        </article>
     </footer>
 </body>
 </html>

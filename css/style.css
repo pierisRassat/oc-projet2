@@ -148,23 +148,24 @@ ul.search-filters-buttons li {
     padding: 0 20px 0 24px;
 }
 ul.search-filters-buttons li:hover {
-    background-color: var(--background-alt);
+    background-color: var(--secondary);
 }
-.search-filters-icon {
+.search-filters-buttons-icon {
     color: var(--primary);
 }
 .search-filters-buttons-desc {
+    font-size: 17px;
     font-weight: 700;
     padding-left: 10px;
 }
-#search-results-numbers {
+#search-results-occurrences {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     padding: 40px 0 0 0;
 }
-#search-results-numbers-icon {
+#search-results-occurrences i {
     display: flex;
     width: 24px;
     height: 24px;
@@ -175,7 +176,7 @@ ul.search-filters-buttons li:hover {
     border: 2px solid var(--background-alt);
     border-radius: 24px;
 }
-#search-results-numbers-text {
+#search-results-occurrences p {
     padding-left: 11px;
 }
 #hosting {
@@ -200,18 +201,12 @@ ul.search-filters-buttons li:hover {
     gap: 30px;
     margin: 23px 40px 0 40px;
 }
-.hosting-in-card-container {
+.hosting-in-card {
     display: flex;
     flex-flow: column wrap;
-    align-content: space-between;
-    margin: 0;
-    padding: 0;
-
-}
-.hosting-in-card {
+    width: calc(33.33% - 20px);
     min-height: 199px;
     height: auto;
-    width: calc(33.33% - 20px);
     background-color: var(--background);
     border: 5px solid var(--background);
     border-radius: 20px 20px 20px 20px;
@@ -219,7 +214,6 @@ ul.search-filters-buttons li:hover {
 }
 .hosting-in-card img {
     width: 100%;
-    max-width: auto;
     object-fit: cover;
     object-position: 50% 45%;
     border: 1px none var(--background);
@@ -227,6 +221,13 @@ ul.search-filters-buttons li:hover {
 }
 .hosting-in-card img.positioned {
     object-position: 0% 100%;
+}
+.hosting-in-card-container {
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
 }
 .hosting-in-card-txt {
     display: flex;
@@ -266,13 +267,23 @@ ul.search-filters-buttons li:hover {
     border: solid 1px var(--background-alt);
     border-radius : 20px;
 }
+#most-popular-title-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0;
+}
+#most-popular-title-container i {
+    margin: 46px 42px 0 0;
+}
 .section-title {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    margin: 42px 40px 0 40px;
+    margin: 42px 0 0 40px;
 }
-#most-popular-title-icon {
+.most-popular-title-icon {
+    margin-top: 50px;
     color: var(--primary);
 }
 #section-most-popular-container {
@@ -285,7 +296,8 @@ ul.search-filters-buttons li:hover {
     display: flex;
     flex-flow: row nowrap;
     width: calc(100% - 80px);
-    height: 144px;
+    min-height: 144px;
+    height: auto;
     margin: 0 40px 0;
     background-color: var(--background);
     border: 1px solid var(--background);
@@ -293,14 +305,14 @@ ul.search-filters-buttons li:hover {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .most-popular-card img {
-    min-width: 137px;
-    height: 143px;
+    min-width: 12vw;
+    max-height: 143px;
     object-fit: cover;
     border: 5px solid var(--background);
     border-radius: 20px 0 0 20px;
 
 }
-.most-pop-card-container {
+.most-popular-card-container {
     max-width: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -371,205 +383,10 @@ footer ul {
     margin: 0;
     padding: 0;
 }
-.footer-elm {
+.footer-nav-elm {
     line-height: 2;
 }
-.footer-elm h2 {
+.footer-nav-elm h2 {
     font-size: 18px;
     margin-bottom: 5px;
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-    html {
-        max-width: 992px;
-        margin: auto;
-    }
-    body {
-        max-width: 100vw;
-        margin: auto;
-    }
-    ul.search-filters-buttons {
-        padding: 0 0 0 17px;
-    }
-    #hosting {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    #hosting-in {
-        max-width: 100vw;
-        display: flex;
-        width: 100%;
-    }
-    #most-popular {
-        display: flex;
-        max-width: calc(100vw - 40px);
-        width: 100%;
-    }
-    #section-most-popular-container {
-        width: calc(100vw - 200px);
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        gap: 23px;
-        margin: auto;
-    }
-    .most-popular-card {
-        min-width: calc(33.3% - 8px);
-        margin: 26px 0 48px 0;
-    }
-    .most-popular-card img {
-        min-width: 106px;
-    }
-    .most-popular-card-txt {
-        padding-top: 10px;
-        padding-left: 10px;
-    }
-    .most-popular-card h3 {
-        font-size: 14px;
-    }
-    .most-popular-card p {
-        font-size: 13px;
-    }
-    .activity-card img {
-        min-width: 25%;
-        height: 246px;
-    }
-    .rating-most-pop {
-        padding-left: 10px;
-        padding-bottom: 12px;
-    }
-}
-@media only screen and (max-width: 768px) {
-    html {
-        max-width: 768px;
-        margin: auto;
-    }
-    body {
-        max-width: 100vw;
-        margin: auto;
-    }
-    header {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        margin: 0 20px 0 20px;
-    }
-    nav#main-navbar ul li {
-        padding-bottom: 24px;
-        width: 50vw;
-    }
-    nav#main-navbar ul li:hover {
-        position: relative;
-        top: 2px;
-        border-top: none;
-        border-bottom: 2px solid var(--primary);
-    }
-    #branding {
-        margin: 63px 20px 0 20px;
-    }
-    #search {
-        margin: 0 20px 0 20px;
-    }
-    #search-input {
-        justify-content: center;
-    }
-    #search-input-form {
-        display: flex;
-        flex-flow: row nowrap;
-    }
-    #search-input-field {
-        min-width: calc(100vw - 160px);
-        max-width: calc(100vw - 40px);
-    }
-    #search-filters-title {
-        padding-bottom: 15px;
-    }
-    #search-filters {
-        flex-flow: column nowrap;
-        align-items: flex-start;
-    }
-    ul.search-filters-buttons {
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding: 0;
-    }
-    ul.search-filters-buttons li {
-        width: calc(50vw - 40px);
-    }
-    #search-input-submit {
-        display: none;
-    }
-    i.hidden {
-        display: inline;
-        padding: 13px 15px 17px 15px;
-        color: var(--background);
-        font-size: 18px;
-        font-weight: 700;
-        background-color: var(--primary);
-        border: 1px solid var(--primary);
-        border-radius: 0 15px 15px 0;
-    }
-    #hosting {
-        display: flex;
-        flex-flow: column-reverse nowrap;
-        margin: 39px 0 0 0;
-    }
-    #hosting-in {
-        min-width: 100vw;
-        display: flex;
-        width: 100%;
-        background-color: var(--background);
-        border: solid 1px var(--background);
-    }
-    #section-hosting-in-container {
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 23px 20px 0;
-    }
-    .hosting-in-card {
-        height: 199px;
-        min-width: calc(100vw - 40px);
-    }
-    .hosting-in-card img {
-        object-position: 50% 54%;
-    }
-    #most-popular {
-        display: flex;
-        min-width: 100vw;
-        border-radius: 0px;
-        width: 100%;
-    }
-    .most-popular-card {
-        min-width: calc(100vw - 40px);
-        margin: 0 20px 0;
-    }
-    #activity {
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 60px 20px 0;
-    }
-    #section-activity-container {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 40px;
-    }
-    .activity-card {
-        display: flex;
-        width: 100%;
-    }
-    .activity-card img {
-        max-width: calc(100vw - 20px);
-        height: 124px;
-        object-position: 50% 5%;
-    }
-    .activity-card img.positioned {
-        object-position: 50% 45%;
-    }
-    footer {
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 61px 20px 0 20px;
-    }
-    .footer-elm {
-        padding: 0 0 0 30px;
-    }
 }
