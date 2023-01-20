@@ -86,7 +86,7 @@ Les images issues des répertoires « 4_small » ne suffisent pas à couvrir 
 
 
 ## Progression
-###Done:
+### Done:
 * HTML document
 * Fonts and icons
 * Text
@@ -96,7 +96,7 @@ Les images issues des répertoires « 4_small » ne suffisent pas à couvrir 
 * Spacing all boxes
 * Responsive design
 
-###Todo:
+### Todo:
 * Check for unused CSS
 * Review and clean code
 
