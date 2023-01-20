@@ -1,9 +1,18 @@
 # oc-projet2
 HTML/CSS model for booki website
 Maquette HTML/CSS pour le site « booki »
+
 ## Goals/Buts
 A responsive (300 to 1400+ pixels) HTML/CSS model.
-Une maquette HTML/CSS affichable de 300 à 1400+ pixels.
+Une maquette HTML/CSS affichable de 300 à 1400+ pixels. 
+Utilisant la sémantique HTML au travers des tags :
+* <article> 
+* <section>
+* <h1> to <h2>
+* <picture>
+* <figure>
+* <header>
+* <footer>
 
 ## Progression
 ###Done:
