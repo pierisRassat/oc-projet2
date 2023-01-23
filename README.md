@@ -15,7 +15,7 @@ Utilisant la sémantique HTML au travers des tags :
 
 ## Traitement des images
 ### Largeur maximale dans le document HTML final (rendu dans un navigateur)
-* 718px en version mobile, pour les images des sections « hosting-in » et « activity ».
+* 718px en version mobile, pour les images des sections « hosting-in » et « activity » avec un viewport de 992 pixels.
 
 ### Taille des images des dossiers « 4_small »
 #### Hébergements :
@@ -65,6 +65,7 @@ Utilisant la sémantique HTML au travers des tags :
 1303×733 nicate-lee-kT-ZyaiwBe0-unsplash.jpg
 
 1500×1000 reisetopia-B8WIgxA_PFU-unsplash.jpg
+
 #### Most-popular section:
 1008×756 aw-creative-VGs8z60yT2c-unsplash.jpg
 
@@ -95,8 +96,6 @@ Les images issues des répertoires « 4_small » ne suffisent pas à couvrir 
 * Sizing all boxes
 * Spacing all boxes
 * Responsive design
-
-### Todo:
 * Check for unused CSS
 * Review and clean code
 
