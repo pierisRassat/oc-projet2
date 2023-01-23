@@ -1,4 +1,6 @@
 # oc-projet2
+HTML/CSS mockup for booki website
+# oc-projet2
 Intégration d'une maquette Figma en HTML/CSS pour le site « booki »
 
 ## Goals/Buts
