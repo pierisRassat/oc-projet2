@@ -16,12 +16,15 @@
     nav#main-navbar ul li {
         padding-bottom: 24px;
         width: 50vw;
+        border-bottom: 2px solid var(--background-alt);
     }
     nav#main-navbar ul li:hover {
         position: relative;
-        top: 2px;
         border-top: none;
         border-bottom: 2px solid var(--primary);
+    }
+    nav#main-navbar ul li a:hover {
+        color: var(--primary);
     }
     #branding {
         margin: 63px 20px 0 20px;
