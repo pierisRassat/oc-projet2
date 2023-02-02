@@ -39,48 +39,48 @@ header {
     background-color: var(--background);
     margin: 0 55px 0 55px;
 }
-header img#main-logo {
+header img {
     margin-top: 40px;
 }
-nav#main-navbar {
+nav {
     display: flex;
     align-items: flex-end;
 }
-nav#main-navbar ul {
+nav ul {
     display: flex;
     flex-flow: row nowrap;
     list-style-type: none;
 }
-nav#main-navbar ul li {
+nav ul li {
     display: flex;
     height: 67px;
     width: 190px;
     align-items: flex-end;
     justify-content: center;
 }
-nav#main-navbar ul li:hover {
+nav ul li:hover {
     border-top: 2px solid var(--primary);
     color: var(--primary);
 }
-nav#main-navbar ul li a:hover {
+nav ul li a:hover {
     color: var(--primary);
 }
-#branding {
+.branding {
     margin: 63px 55px 0 55px;
 }
-#branding h1 {
+.branding h1 {
     font-size: 22px;
     font-weight: 700;
 }
-#tagline {
+.tagline {
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
 }
-#search {
+.search {
     margin: 0 55px 0 55px;
 }
-#search-input {
+.search-input {
     display: flex;
     flex-flow: row nowrap;
     height: 49px;
@@ -123,11 +123,11 @@ nav#main-navbar ul li a:hover {
 i.hidden {
     display: none;
 }
-#search-filters {
+.search-filters {
     display: flex;
     margin-top: 31px;
 }
-#search-filters-title {
+.search-filters h2 {
     padding: 13px 0 0 0;
     font-size: 18px;
 }
@@ -159,14 +159,14 @@ ul.search-filters-buttons li:hover {
     font-weight: 700;
     padding-left: 10px;
 }
-#search-results-occurrences {
+.search-results-occurrences {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     padding: 40px 0 0 0;
 }
-#search-results-occurrences i {
+.search-results-occurrences i {
     display: flex;
     width: 24px;
     height: 24px;
@@ -177,17 +177,17 @@ ul.search-filters-buttons li:hover {
     border: 2px solid var(--background-alt);
     border-radius: 24px;
 }
-#search-results-occurrences p {
+.search-results-occurrences p {
     padding-left: 11px;
 }
-#hosting {
+.hosting {
     display: flex;
     flex-flow: row nowrap;
     gap: 31px;
     max-width: calc(100vw - 50px);
     margin: 39px 50px 0 50px;
 }
-#hosting-in {
+.hosting-in {
     max-width: 60vw;
     display: flex;
     flex-flow: column nowrap;
@@ -195,7 +195,7 @@ ul.search-filters-buttons li:hover {
     border: solid 1px var(--background-alt);
     border-radius: 20px;
 }
-#section-hosting-in-container {
+.section-hosting-in-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -254,13 +254,13 @@ ul.search-filters-buttons li:hover {
     padding-top: 9px;
     color: var(--primary);
 }
-#hosting-in-display-more {
+.hosting-in-display-more {
     margin: 40px 0 40px 0;
     padding-left: 44px;
     font-size: 18px;
     font-weight: 700;
 }
-#most-popular {
+.most-popular {
     max-width: 32vw;
     display: flex;
     flex-flow: column nowrap;
@@ -268,13 +268,13 @@ ul.search-filters-buttons li:hover {
     border: solid 1px var(--background-alt);
     border-radius : 20px;
 }
-#most-popular-title-container {
+.most-popular-title-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     margin: 0;
 }
-#most-popular-title-container i {
+.most-popular-title-container i {
     margin: 46px 42px 0 0;
 }
 .section-title {
@@ -287,7 +287,7 @@ ul.search-filters-buttons li:hover {
     margin-top: 50px;
     color: var(--primary);
 }
-#section-most-popular-container {
+.section-most-popular-container {
     display: flex;
     flex-flow: column nowrap;
     gap: 33px;
@@ -334,17 +334,17 @@ ul.search-filters-buttons li:hover {
     font-weight: 400;
     font-size: 14px;
 }
-#activity {
+.activity {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     background-color: var(--background);
     margin: 60px 50px 0;
 }
-#section-activity-title {
+.section-activity-title {
     margin: 0 0 34px 0;
 }
-#section-activity-container {
+.section-activity-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
