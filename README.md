@@ -1,18 +1,16 @@
 # oc-projet2
-HTML/CSS mockup for booki website
-Intégration d'une maquette Figma en HTML/CSS pour le site « booki »
+HTML/CSS mockup for booki website / Intégration d'une maquette Figma en HTML/CSS pour le site « booki »
 
 ## Goals/Buts
 Une maquette HTML/CSS responsive, affichable de 300 à + de 1400 pixels. 
 Utilisant la sémantique HTML au travers des tags :
 * `<header>`
-* `<article >`
+* `<article>`
 * `<section>`
 * `<h1 to h3>`
 * `<picture>`
-* `<figure>`
-* `<figcaption>`
 * `<footer>`
+* `<img>`
 
 ## Traitement des images
 ### Largeur maximale dans le document HTML final (rendu dans un navigateur)
@@ -84,7 +82,7 @@ Utilisant la sémantique HTML au travers des tags :
 1404×936 reno-laithienne-QUgJhdY5Fyk-unsplash.jpg
 
 ## Conclusion
-Les images issues des répertoires « 4_small » ne suffisent pas à couvrir nativement la largeur qu'elles ont dans le rendu navigateur. En conséquence, j'ai utilisé les images des répertoires « 3_medium » pour les sections « hosting-in » et « activity » dans la version mobile (viewport ≤ 768px). Le choix s'effectue dans `index.html` en utilisant l'attribut `srcset` de la balise `<source>` incluse dans la balise `<picture>`.
+Les images issues des répertoires « 4_small » ne suffisent pas à couvrir nativement la largeur qu'elles ont dans le rendu navigateur. En conséquence, j'ai utilisé les images des répertoires « 3_medium » pour les sections « hosting-in » et « activity » dans la version mobile (viewport ≤ 768px). Le choix s'effectue dans `index.html` en utilisant l'attribut `srcset` incluse dans la balise `<picture>`.
 
 
 ## Progression
