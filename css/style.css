@@ -86,7 +86,7 @@ nav ul li a:hover {
     height: 49px;
     margin-top: 30px;
 }
-#location-icon {
+.location-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@ nav ul li a:hover {
     border: 1px solid var(--background-alt);
     border-radius: 15px 0 0 15px;
 }
-#location-icon i.fa-location-dot {
+.location-icon i.fa-location-dot {
     font-size: 18px;
 }
 #search-input-field {

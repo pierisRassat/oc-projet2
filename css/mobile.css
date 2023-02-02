@@ -35,16 +35,13 @@
     .search-input {
         justify-content: center;
     }
-    #search-input-form {
+    .search-input-form {
         display: flex;
         flex-flow: row nowrap;
     }
     #search-input-field {
         min-width: calc(100vw - 160px);
         max-width: calc(100vw - 40px);
-    }
-    #search-filters-title {
-        padding-bottom: 15px;
     }
     .search-filters {
         flex-flow: column nowrap;
